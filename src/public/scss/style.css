@@ -14,7 +14,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 0.9375rem;
   color: black;
   overflow-x: hidden;
@@ -94,9 +94,9 @@ button {
 }
 
 .container-pall {
-  padding-top: 2.375rem;
+  padding-top: 2.125rem;
   padding-right: 1.5rem;
-  padding-bottom: 2.375rem;
+  padding-bottom: 2.125rem;
   padding-left: 1.5rem;
 }
 
@@ -108,8 +108,8 @@ button {
 }
 
 .container-py {
-  padding-top: 2.375rem;
-  padding-bottom: 2.375rem;
+  padding-top: 2.125rem;
+  padding-bottom: 2.125rem;
 }
 
 @media (min-width: 64em) {
