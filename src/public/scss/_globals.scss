@@ -1,0 +1,149 @@
+// ========== Basic Styling ==========
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: $font-med;
+    color: $black;
+    overflow-x: hidden;
+    user-select: none;
+
+    &.noscroll {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+// ========== Text Styles ==========
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.125rem;
+    letter-spacing: 4px;
+
+    @include breakpoint-up(medium) {
+        font-size: 3rem;
+    }
+
+    @include breakpoint-up(large) {
+        font-size: 4rem;
+    }
+}
+
+h2 {
+    font-size: 1.875rem;
+
+    @include breakpoint-up(large) {
+        font-size: 2.1875rem;
+    }
+}
+
+h3 {
+    font-size: 1.5rem;
+
+    @include breakpoint-up(large) {
+        font-size: 1.625rem;
+    }
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    background-color: $white;
+    border: 1px solid $black;
+    font-size: $font-sm;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: .875rem 2.375rem;
+}
+
+// ========== Spacing ==========
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+
+    &-pall {
+        padding-top: 2.375rem;
+        padding-right: 1.5rem;
+        padding-bottom: 2.375rem;
+        padding-left: 1.5rem;
+
+        @include breakpoint-up(large) {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+    &-py {
+        padding-top: 2.375rem; 
+        padding-bottom: 2.375rem;
+        
+        @include breakpoint-up(large) {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+
+    &-px {
+        padding-left: 1.5rem; 
+        padding-right: 1.5rem; 
+    }
+}
+
+// ========== Flexbox ==========
+.flex {
+    display: flex;
+
+    &-col {
+        flex-direction: column;
+    }
+
+    &-row {
+        flex-direction: row;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+// ========== Visibility ==========
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
