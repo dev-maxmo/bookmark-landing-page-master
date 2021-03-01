@@ -1,0 +1,117 @@
+.header {
+    position: relative;
+
+    &__logo-link {
+        background: url("/images/logo-bookmark.svg");
+        width: 155px;
+        height: 26px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 2;
+        transition: all .3s;
+
+        &.white {
+            background-image: url("/images/logo-bookmark-white.svg");
+        }
+    }
+
+    &__toggler {
+        height: 18px;
+        position: relative;
+        z-index: 2;
+
+        & span {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background-color: $veryDarkBlue;
+            transform-origin: center center;
+            transition: all .3s;
+
+            &.bg-white {
+                background-color: $white;
+            }
+        }
+
+        &.open {
+
+            span:first-child {
+                transform: translateY(7.5px) rotate(45deg);
+            }
+
+            span:last-child {
+                transform: translateY(-7.5px) rotate(-45deg);
+            }
+
+            span:nth-child(2) {
+                transform: translateX(-26px);
+                opacity: 0;
+            }
+        }
+    }
+
+    &__mobile-menu {
+        position: absolute;
+        top: -100vh;
+        width: 100%;
+        height: 100vh;
+        background-color: $veryDarkBlue;
+        opacity: 90%;
+        padding-top: 6.5rem;
+        text-align: center;
+        transition: top .3s;
+
+        &.active {
+            top: 0;
+        }
+
+        &-button {
+            width: 100%;
+            color: $white;
+            margin: 1.5rem 0;
+            padding: .875rem 0;
+            border: 1px solid $white;
+            border-radius: 4px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+    }
+
+    &__mobile-link {
+        width: 100%;
+        color: $white;
+        padding: 1.5rem 0;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        border-bottom: 1px solid rgba($color: $white, $alpha: .5);
+        opacity: 0;
+        transition-delay: .3s;
+
+        &.vissible {
+            opacity: 1;
+        }
+
+        &:first-child {
+            border-top: 1px solid rgba($color: $white, $alpha: .5);
+        }
+    }
+
+    &__socials-container {
+        margin-top: auto;
+        padding-bottom: 3rem;
+    }
+
+    &__socials-link {
+
+        &:first-child {
+            margin-right: 1rem;
+        }
+
+        &:last-child {
+            margin-left: 1rem;
+        }
+    }
+}

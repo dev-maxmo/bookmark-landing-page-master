@@ -84,9 +84,9 @@ button {
 
     &-pall {
         padding-top: 2.125rem;
-        padding-right: 1.5rem;
+        padding-right: 1.625rem;
         padding-bottom: 2.125rem;
-        padding-left: 1.5rem;
+        padding-left: 1.625rem;
 
         @include breakpoint-up(large) {
             padding-top: 4rem;
@@ -105,8 +105,8 @@ button {
     }
 
     &-px {
-        padding-left: 1.5rem; 
-        padding-right: 1.5rem; 
+        padding-left: 1.625rem; 
+        padding-right: 1.625rem; 
     }
 }
 
