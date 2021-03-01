@@ -330,6 +330,15 @@ button {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 4px;
+  opacity: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.header__mobile-menu-button.vissible {
+  opacity: 1;
 }
 
 .header__mobile-link {
@@ -341,6 +350,8 @@ button {
   letter-spacing: 4px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   opacity: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   -webkit-transition-delay: .3s;
           transition-delay: .3s;
 }
@@ -356,6 +367,18 @@ button {
 .header__socials-container {
   margin-top: auto;
   padding-bottom: 3rem;
+}
+
+.header__socials-link {
+  opacity: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.header__socials-link.vissible {
+  opacity: 1;
 }
 
 .header__socials-link:first-child {
