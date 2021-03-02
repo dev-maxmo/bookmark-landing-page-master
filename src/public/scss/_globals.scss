@@ -82,13 +82,14 @@ a:hover {
 }
 
 .btn {
-    padding: 1rem 1.5rem;
+    padding: .875rem .625rem;
     border-radius: 5px;
     box-shadow: 0px 2px 10px rgba($color: $black, $alpha: .2);
     transition: all .15s;
 
     @include breakpoint-up(large) {
-        
+        padding: .875rem 1.875rem;
+
         &:hover {
             background-color: transparent;
         }
@@ -123,7 +124,6 @@ a:hover {
     }
 
     &-softRed {
-        padding: .875rem 1.875rem;
         border: 2px solid $softRed;
         background-color: $softRed;
         color: $white;
