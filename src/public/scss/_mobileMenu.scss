@@ -141,21 +141,4 @@
             color: $softRed;
         }
     }
-
-    &__desktop-button {
-        padding: .875rem 1.875rem;
-        border: 2px solid $softRed;
-        background-color: $softRed;
-        color: $white;
-        border-radius: 5px;
-        text-transform: uppercase;
-        box-shadow: 0px 2px 10px rgba($color: $black, $alpha: .2);
-        transition: all .15s;
-
-        &:hover {
-            background-color: transparent;
-            border: 2px solid $softRed;
-            color: $softRed;
-        }
-    }
 }
