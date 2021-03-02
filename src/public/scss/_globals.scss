@@ -26,11 +26,16 @@ body {
 }
 
 // ========== Text Styles ==========
+p {
+    font-size: $font-med;
+    line-height: 1.6;
+}
+
 h1, h2, h3 {
     margin: 0;
     font-weight: 100;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 h1 {
@@ -82,7 +87,7 @@ a:hover {
     }
 
     &-light {
-        background-color: $grayishBlue;
+        background-color: #F7F7F7;
         color: $black;
         margin-left: 8px;
     }
