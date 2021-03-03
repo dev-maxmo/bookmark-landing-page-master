@@ -55,6 +55,7 @@ const featuresContent = document.querySelectorAll(".features__content");
 
 featuresTab.addEventListener("click", (e) => {
     const featuresId = e.target.dataset.id;
+    event.preventDefault();
     if (featuresId) {
         // Remove active from other buttons
         featuresButtons.forEach((btn) => {
