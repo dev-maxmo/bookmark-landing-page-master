@@ -1,3 +1,4 @@
+// // ========== Variables ==========
 const toggler = document.querySelector(".header__toggler");
 const mobileMenu = document.querySelector(".header__mobile-menu");
 const mobileButton = document.querySelector(".header__mobile-menu-button");
@@ -7,6 +8,7 @@ const body = document.querySelector("body");
 const headerLogo = document.querySelector(".header__logo-link");
 const togglerLine = document.querySelectorAll("span");
 
+// ========== Mobile Menu Start ==========
 toggler.addEventListener('click', () => {
     toggler.classList.toggle("open");
     mobileMenu.classList.toggle("active");
@@ -44,3 +46,27 @@ toggler.addEventListener('click', () => {
         });
     }
 });
+// ========== Mobile Menu End ==========
+
+// ========== Tabs Start =========
+const featuresButtons = document.querySelectorAll(".tab-btn");
+const featuresTab = document.querySelector(".features__tabs");
+const featuresContent = document.querySelectorAll(".features__content");
+
+featuresTab.addEventListener("click", (e) => {
+    const featuresId = e.target.dataset.id;
+    if (featuresId) {
+        // Remove active from other buttons
+        featuresButtons.forEach((btn) => {
+            btn.classList.remove("btn-active");
+            e.target.classList.add("btn-active");
+        });
+        // Hide other Tabs
+        featuresContent.forEach((content) => {
+            content.classList.remove("content-active");
+        });
+        const element = document.getElementById(featuresId);
+        element.classList.add("content-active");
+    }
+});
+// ========== Tabs End =========
