@@ -66,6 +66,7 @@
 
         @include breakpoint-up(large) {
             flex-direction: row;
+            height: 500px;
         }
 
         &.content-active {
