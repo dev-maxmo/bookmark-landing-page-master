@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Rubik', sans-serif;
-  font-size: 1.025rem;
+  font-size: 1rem;
   color: black;
   overflow-x: hidden;
   -webkit-user-select: none;
@@ -29,24 +29,34 @@ body.noscroll {
   overflow: hidden;
 }
 
+.text-center {
+  text-align: center;
+}
+
 p {
-  font-size: 1.025rem;
+  font-size: 1rem;
   line-height: 1.6;
-  max-width: 32rem;
+  max-width: 34rem;
   color: #9194a1;
-  margin: 1.625rem 0;
 }
 
 @media (min-width: 64em) {
   p {
     font-size: 1.25rem;
+    margin: 1.625rem 0;
   }
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: 0;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.2;
+}
+
+@media (min-width: 64em) {
+  h1, h2, h3, h4 {
+    line-height: 1.5;
+  }
 }
 
 h1 {
@@ -78,7 +88,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   color: #252b46;
 }
 
@@ -88,18 +98,16 @@ h3 {
   }
 }
 
+h4 {
+  font-size: 1.5rem;
+  color: #252b46;
+}
+
 a,
 a:visited,
 a:hover {
   text-decoration: none;
-}
-
-@media (min-width: 64em) {
-  a,
-  a:visited,
-  a:hover {
-    font-size: 1.25rem;
-  }
+  font-size: 1rem;
 }
 
 .btn {
@@ -126,7 +134,6 @@ a:hover {
   background-color: #5368df;
   border: 2px solid #5368df;
   color: white;
-  margin-right: 8px;
 }
 
 @media (min-width: 64em) {
@@ -138,7 +145,6 @@ a:hover {
 .btn-light {
   background-color: #F7F7F7;
   color: #252b46;
-  margin-left: 8px;
   border: 2px solid transparent;
 }
 
@@ -558,6 +564,10 @@ a:hover {
   }
 }
 
+.hero .btn:first-child {
+  margin-right: 1rem;
+}
+
 .features {
   text-align: center;
 }
@@ -689,5 +699,62 @@ a:hover {
   .features__content-text .btn {
     display: inline-block;
   }
+}
+
+.extension__grid-cards {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(17.5rem, 17.5rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(17.5rem, 17.5rem));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 2rem;
+  margin: 3rem 0;
+}
+
+@media (min-width: 64em) {
+  .extension__grid-cards {
+    height: 28rem;
+  }
+}
+
+.extension__card {
+  background-color: white;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 22.5rem;
+  -webkit-box-shadow: 0px 4px 10px rgba(83, 104, 223, 0.2);
+          box-shadow: 0px 4px 10px rgba(83, 104, 223, 0.2);
+  border-radius: 12px;
+}
+
+@media (min-width: 64em) {
+  .extension__card:nth-child(2) {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .extension__card:last-child {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+.extension__card .card-heading {
+  margin-top: 1.5rem;
+}
+
+.extension__card .card-description {
+  font-size: 1rem;
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+.extension__card .card-button {
+  padding: .875rem 1.875rem;
+  margin: 1.5rem 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -26,22 +26,30 @@ body {
 }
 
 // ========== Text Styles ==========
+.text-center {
+    text-align: center;
+}
+
 p {
     font-size: $font-med;
     line-height: 1.6;
-    max-width: 32rem;
+    max-width: 34rem;
     color: $grayishBlue;
-    margin: 1.625rem 0;
 
     @include breakpoint-up(large) {
         font-size: $font-lg;
+        margin: 1.625rem 0;
     }
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     margin: 0;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.2;
+
+    @include breakpoint-up(large) {
+        line-height: 1.5;
+    }
 }
 
 h1 {
@@ -67,7 +75,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
     color: $veryDarkBlue;
 
     @include breakpoint-up(large) {
@@ -75,14 +83,16 @@ h3 {
     }
 }
 
+h4 {
+    font-size: 1.5rem;
+    color: $veryDarkBlue;
+}
+
 a,
 a:visited,
 a:hover {
     text-decoration: none;
-
-    @include breakpoint-up(large) {
-        font-size: $font-lg;
-    }
+    font-size: $font-med;
 }
 
 .btn {
@@ -105,7 +115,6 @@ a:hover {
         background-color: $softBlue;
         border: 2px solid $softBlue;
         color: $white;
-        margin-right: 8px;
 
         @include breakpoint-up(large) {
             
@@ -118,7 +127,6 @@ a:hover {
     &-light {
         background-color: #F7F7F7;
         color: $veryDarkBlue;
-        margin-left: 8px;
         border: 2px solid transparent;
 
         @include breakpoint-up(large) {
