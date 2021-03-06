@@ -71,3 +71,16 @@ featuresTab.addEventListener("click", (e) => {
     }
 });
 // ========== Tabs End =========
+
+// ========== FAQ Start =========
+
+const question = document.querySelectorAll(".question");
+
+question.forEach((action) => {
+    action.addEventListener("click", () => {
+        let answer = this.nextSibling;
+        answer.classList.toggle("answer-active");
+    });
+});
+
+// ========== FAQ End =========

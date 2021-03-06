@@ -23,9 +23,9 @@
       </a>
 
       <div class="header__desktop-menu hide-for-mobile">
-        <a href="" class="header__desktop-link">Features</a>
-        <a href="" class="header__desktop-link">Pricing</a>
-        <a href="" class="header__desktop-link">Contact</a>
+        <a href="#features" class="header__desktop-link">Features</a>
+        <a href="#extension" class="header__desktop-link">Download</a>
+        <a href="#faq" class="header__desktop-link">FAQ's</a>
         <a href="" class="btn btn-softRed">Login</a>
       </div>
 
@@ -39,8 +39,8 @@
 
     <div class="header__mobile-menu container-px flex flex-col hide-for-desktop">
       <a class="header__mobile-link" href="#">Features</a>
-      <a class="header__mobile-link" href="#">Pricing</a>
-      <a class="header__mobile-link" href="#">Contact</a>
+      <a class="header__mobile-link" href="#">Download</a>
+      <a class="header__mobile-link" href="#">FAQ's</a>
       <a class="header__mobile-menu-button" href="#">Login</a>
 
 
@@ -74,7 +74,7 @@
 
   </section>
 
-  <section class="features container container-pall flex flex-col flex-ai-c">
+  <section id="features" class="features container container-pall flex flex-col flex-ai-c">
 
     <div class="features__title">
       <h3>Features</h3>
@@ -134,7 +134,7 @@
 
   </section>
 
-  <section class="extension container container-pall flex flex-col flex-ai-c text-center">
+  <section id="extension" class="extension container container-pall flex flex-col flex-ai-c text-center">
 
     <div class="extension__title">
       <h3>Download the extension</h3>
@@ -174,49 +174,65 @@
 
   </section>
 
-  <!-- Features
+  <section id="faq" class="faq container container-pall flex flex-col flex-ai-c">
 
-  Frequently Asked Questions
-  
-  Here are some of our FAQs. If you have any other questions you’d like 
-  answered please feel free to email us. -->
+    <div class="faq__title text-center">
+      <h3>Frequently Asked Questions</h3>
+      <p>Here are some of our FAQs. If you have any other questions you’d like 
+        answered please feel free to email us.</p>
+    </div>
 
-  <!-- Question 1 -->
-  <!-- What is Bookmark? -->
+    <ul class="faq__dropdown">
 
-  <!-- Answer 1 -->
-  <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
-  justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis. -->
+      <li>
+        <a class="question flex flex-ai-c flex-jc-sb" href="#">What is Bookmark?<span><img src="/images/icon-arrow.svg"></span></a>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+        </div>
+      </li>
 
-  <!-- Question 2 -->
-  <!-- How can I request a new browser? -->
+      <li>
+        <a class="question flex flex-ai-c flex-jc-sb" href="#">How can I request a new browser?<span><img src="/images/icon-arrow.svg"></span></a>
+        <div class="answer">
+          <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+        </div>
+      </li>
 
-  <!-- Answer 2 -->
-  <!-- Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
-  Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
-  ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
-  Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. -->
+      <li>
+        <a class="question flex flex-ai-c flex-jc-sb" href="#">Is there a mobile app?<span><img src="/images/icon-arrow.svg"></span></a>
+        <div class="answer">
+          <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.</p>
+        </div>
+      </li>
 
-  <!-- Question 3 -->
-  <!-- Is there a mobile app? -->
+      <li>
+        <a class="question flex flex-ai-c flex-jc-sb" href="#">What about other Chromium browsers?<span><img src="/images/icon-arrow.svg"></span></a>
+        <div class="answer">
+          <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.</p>
+        </div>
+      </li>
 
-  <!-- Answer 3 -->
-  <!-- Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
-  urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
-  sollicitudin ex et ultricies bibendum. -->
+    </ul>
 
-  <!-- Question 4 -->
-  <!-- What about other Chromium browsers? -->
+    <a href="#" class="btn btn-blue">More Info</a>
 
-  <!-- Answer 4 -->
-  <!-- Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
-  vitae neque eget nisl gravida pellentesque non ut velit.
+  </section>
 
-  More Info
+  <section class="contact">
 
-  35,000+ already joined
+    <div class="contact__content container container-px flex flex-col flex-ai-c text-center">
+      <p class="contact__num-users">35,000+ already joined</p>
+      <h3 class="contact__heading">Stay up-to-date with what we’re doing</h3>
+      <div class="contact__form flex flex-col flex-ai-c">
+        <input class="contact__mail-form" type="email" placeholder="Enter you email adress">
+        <a href="" class="btn btn-softRed">Contact Us</a>
+      </div>
+    </div>
 
-  Stay up-to-date with what we’re doing
+  </section>
+
+  <!--
 
   Contact Us
 

@@ -1,0 +1,53 @@
+.faq {
+
+
+    &__dropdown {
+        max-width: 36rem;
+        margin: 2.5rem 0;
+
+        & li {
+            list-style: none;
+            border-bottom: 2px solid rgba($color: $veryDarkBlue, $alpha: .1);
+            padding: 1.5rem 0;
+
+            &:first-child {
+                border-top: 2px solid rgba($color: $veryDarkBlue, $alpha: .1);
+            }
+        }
+
+        & .question {
+            width: 100%;
+            font-size: $font-lg;
+            text-transform: none;
+            color: $black;
+            transition: color .15s;
+
+            &-active {
+                color: $softRed;
+            }
+
+            @include breakpoint-up(large) {
+                &:hover {
+                    color: $softRed;
+                }
+            }
+        }
+
+        & .answer {
+            max-height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            transition: all .3s;
+
+            & p {
+                font-size: $font-med;
+            }
+
+            &.answer-active {
+                max-height: 100%;
+                overflow: visible;
+                margin: 1.875rem 0 0 0;
+            }
+        }
+    }
+}

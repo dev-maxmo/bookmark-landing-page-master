@@ -2,6 +2,7 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -103,6 +104,11 @@ h4 {
   color: #252b46;
 }
 
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 a,
 a:visited,
 a:hover {
@@ -112,7 +118,7 @@ a:hover {
 
 .btn {
   display: inline-block;
-  padding: .875rem .625rem;
+  padding: .875rem 1.5rem;
   cursor: pointer;
   border-radius: 5px;
   -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
@@ -122,9 +128,6 @@ a:hover {
 }
 
 @media (min-width: 64em) {
-  .btn {
-    padding: .875rem 1.875rem;
-  }
   .btn:hover {
     background-color: transparent;
   }
@@ -158,10 +161,16 @@ a:hover {
   border: 2px solid #fa5757;
   background-color: #fa5757;
   color: white;
-  border-radius: 5px;
+  font-size: 0.875rem;
   text-transform: uppercase;
   -webkit-transition: all .15s;
   transition: all .15s;
+}
+
+@media (min-width: 64em) {
+  .btn-softRed {
+    font-size: 1rem;
+  }
 }
 
 .btn-softRed:hover {
@@ -729,6 +738,8 @@ a:hover {
   -webkit-box-shadow: 0px 4px 10px rgba(83, 104, 223, 0.2);
           box-shadow: 0px 4px 10px rgba(83, 104, 223, 0.2);
   border-radius: 12px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 @media (min-width: 64em) {
@@ -740,6 +751,12 @@ a:hover {
   .extension__card:last-child {
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+  .extension__card:hover {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+    -webkit-box-shadow: 0px 10px 20px rgba(83, 104, 223, 0.4);
+            box-shadow: 0px 10px 20px rgba(83, 104, 223, 0.4);
   }
 }
 
@@ -756,5 +773,120 @@ a:hover {
 .extension__card .card-button {
   padding: .875rem 1.875rem;
   margin: 1.5rem 0;
+}
+
+.faq__dropdown {
+  max-width: 36rem;
+  margin: 2.5rem 0;
+}
+
+.faq__dropdown li {
+  list-style: none;
+  border-bottom: 2px solid rgba(37, 43, 70, 0.1);
+  padding: 1.5rem 0;
+}
+
+.faq__dropdown li:first-child {
+  border-top: 2px solid rgba(37, 43, 70, 0.1);
+}
+
+.faq__dropdown .question {
+  width: 100%;
+  font-size: 1.25rem;
+  text-transform: none;
+  color: black;
+  -webkit-transition: color .15s;
+  transition: color .15s;
+}
+
+.faq__dropdown .question-active {
+  color: #fa5757;
+}
+
+@media (min-width: 64em) {
+  .faq__dropdown .question:hover {
+    color: #fa5757;
+  }
+}
+
+.faq__dropdown .answer {
+  max-height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.faq__dropdown .answer p {
+  font-size: 1rem;
+}
+
+.faq__dropdown .answer.answer-active {
+  max-height: 100%;
+  overflow: visible;
+  margin: 1.875rem 0 0 0;
+}
+
+.contact {
+  background-color: #5368df;
+  padding: 4rem 0;
+}
+
+.contact__content {
+  color: white;
+}
+
+.contact__num-users {
+  color: white;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.contact__heading {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.contact__form {
+  width: 100%;
+}
+
+@media (min-width: 64em) {
+  .contact__form {
+    width: 38rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.contact__mail-form {
+  width: 100%;
+  height: 3.125rem;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact .btn {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-transform: none;
+}
+
+@media (min-width: 64em) {
+  .contact .btn {
+    margin: 0 0 0 1rem;
+    width: auto;
+  }
+  .contact .btn:hover {
+    background-color: white;
+  }
 }
 /*# sourceMappingURL=style.css.map */
